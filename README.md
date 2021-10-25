@@ -27,6 +27,38 @@ module.exports = {
 };
 ```
 
+Use examples:
+
+```html
+<!-- Center vertically -->
+<div class="relative">
+  <div class="center-absolute-y">
+    <!-- content -->
+  </div>
+</div>
+
+<!-- Center horizontally -->
+<div class="relative">
+  <div class="center-absolute-x">
+    <!-- content -->
+  </div>
+</div>
+
+<!-- Center center both horizontally and vertically -->
+<div class="relative">
+  <div class="center-absolute">
+    <!-- content -->
+  </div>
+</div>
+
+<!-- Center center both horizontally and vertically with media query: @media (min-width: 640px)-->
+<div class="relative">
+  <div class="sm:center-absolute">
+    <!-- content -->
+  </div>
+</div>
+```
+
 This plugin will generate following CSS:
 
 ```css
@@ -75,38 +107,6 @@ This plugin will generate following CSS:
 */
 
 /* ... */
-```
-
-Use examples:
-
-```html
-<!-- Center vertically -->
-<div class="relative">
-  <div class="center-absolute-y">
-    <!-- content -->
-  </div>
-</div>
-
-<!-- Center horizontally -->
-<div class="relative">
-  <div class="center-absolute-x">
-    <!-- content -->
-  </div>
-</div>
-
-<!-- Center center both horizontally and vertically -->
-<div class="relative">
-  <div class="center-absolute">
-    <!-- content -->
-  </div>
-</div>
-
-<!-- Center center both horizontally and vertically with media query: @media (min-width: 640px)-->
-<div class="relative">
-  <div class="sm:center-absolute">
-    <!-- content -->
-  </div>
-</div>
 ```
 
 ## License
