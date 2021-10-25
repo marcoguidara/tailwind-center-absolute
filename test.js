@@ -29,24 +29,130 @@ function generatePluginCss(overrides) {
 test('utility classes can be generated', () => {
   return generatePluginCss().then(css => {
     expect(css).toMatchCss(`
-    .center-absolute-y {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%)
-    }
+      .center-absolute-y {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%)
+      }
 
-    .center-absolute-x {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%)
-    }
+      .center-absolute-x {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%)
+      }
 
-    .center-absolute {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%)
-    }`);
+      .center-absolute {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%)
+      }
+
+      @media (min-width: 640px) {
+        .sm\\:center-absolute-y {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%)
+        }
+
+        .sm\\:center-absolute-x {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%)
+        }
+
+        .sm\\:center-absolute {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%)
+        }
+      }
+
+      @media (min-width: 768px) {
+        .md\\:center-absolute-y {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%)
+        }
+
+        .md\\:center-absolute-x {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%)
+        }
+
+        .md\\:center-absolute {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%)
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .lg\\:center-absolute-y {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%)
+        }
+
+        .lg\\:center-absolute-x {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%)
+        }
+
+        .lg\\:center-absolute {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%)
+        }
+      }
+
+      @media (min-width: 1280px) {
+        .xl\\:center-absolute-y {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%)
+        }
+
+        .xl\\:center-absolute-x {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%)
+        }
+
+        .xl\\:center-absolute {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%)
+        }
+      }
+
+      @media (min-width: 1536px) {
+        .\\32xl\\:center-absolute-y {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%)
+        }
+
+        .\\32xl\\:center-absolute-x {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%)
+        }
+
+        .\\32xl\\:center-absolute {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%)
+        }
+      }`
+    );
   });
 });
 
@@ -77,24 +183,48 @@ test('utility classes can be generated', () => {
 //       },
 //     },
 //     variants: {
-//       centerAbsolute: ['responsive', 'hover'],
+//       centerAbsolute: ['responsive'],
 //     },
 //   }).then(css => {
 //     expect(css).toMatchCss(`
-//     .example-utility-class {
-//       display: block
-//     } 
-//     .hover\\:example-utility-class:hover {
-//       display: block
-//     } 
-//     @media (min-width: 640px) {
-//       .sm\\:example-utility-class {
-//         display: block
-//       }
-//       .sm\\:hover\\:example-utility-class:hover {
-//         display: block
-//       }
+//     .center-absolute-y {
+//       position: absolute;
+//       top: 50%;
+//       transform: translateY(-50%)
 //     }
+
+//     .center-absolute-x {
+//       position: absolute;
+//       left: 50%;
+//       transform: translateX(-50%)
+//     }
+
+//     .center-absolute {
+//       position: absolute;
+//       left: 50%;
+//       top: 50%;
+//       transform: translate(-50%, -50%)
+//     }
+
+//     @media (min-width: 640px) {
+//       .sm:center-absolute-y {
+//         position: absolute;
+//         top: 50%;
+//         transform: translateY(-50%)
+//       }
+
+//       .sm:center-absolute-x {
+//         position: absolute;
+//         left: 50%;
+//         transform: translateX(-50%)
+//       }
+
+//       .sm:center-absolute {
+//         position: absolute;
+//         left: 50%;
+//         top: 50%;
+//         transform: translate(-50%, -50%)
+//       }
 //     `);
 //   });
 // });
