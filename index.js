@@ -36,7 +36,7 @@ module.exports = plugin(
     variants: {
       // Default variants for your custom plugin.
       // Docs: https://tailwindcss.com/docs/plugins#variants
-      // centerAbsolute: ['responsive'],
+      centerAbsolute: ['responsive'],
     },
   }
 );
