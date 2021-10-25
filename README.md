@@ -71,7 +71,7 @@ Use examples:
 
 <!-- Center center both horizontally and vertically -->
 <div class="relative">
-  <div class="center-absolute-x">
+  <div class="center-absolute">
     <!-- content -->
   </div>
 </div>
