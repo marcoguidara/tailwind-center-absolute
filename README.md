@@ -1,11 +1,11 @@
-# tailwind-center-absolute
+# @marcoguidara/tailwind-center-absolute
 
 > A plugin that provides utilities for centering an element on x/y axis.
 
 Install the plugin from npm:
 
 ```
-$ npm install tailwind-center-absolute
+$ npm install @marcoguidara/tailwind-center-absolute
 ```
 
 Then add the plugin to your `tailwind.config.js` file:
@@ -21,7 +21,7 @@ module.exports = {
   },
   plugins: [
     // ...
-    require('tailwind-center-absolute'),
+    require('@marcoguidara/tailwind-center-absolute'),
     // ...
   ],
 };
@@ -111,7 +111,7 @@ This plugin will generate following CSS:
 
 ## License
 
-tailwind-center-absolute is licensed under the MIT License.
+@marcoguidara/tailwind-center-absolute is licensed under the MIT License.
 
 ## Credits
 
