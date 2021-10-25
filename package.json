@@ -49,5 +49,6 @@
     "prettier": "^2.2.0",
     "standard-version": "^9.1.0",
     "tailwindcss": "^2.0.1"
-  }
+  },
+  "dependencies": {}
 }
