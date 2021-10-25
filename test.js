@@ -10,15 +10,10 @@ expect.extend({
 
 function generatePluginCss(overrides) {
   const config = {
-    theme: {
-      // Default options for your plugin.
-      centerAbsolute: {
-        YOUR_PLUGIN_CUSTOM_OPTION: false,
-      },
-    },
+    theme: {},
     variants: {
       // Default variants for your plugin.
-      centerAbsolute: [],
+      // centerAbsolute: ['responsive'],
     },
     corePlugins: false,
     plugins: [customPlugin],
@@ -33,59 +28,73 @@ function generatePluginCss(overrides) {
 
 test('utility classes can be generated', () => {
   return generatePluginCss().then(css => {
-    expect(css).toMatchCss(`    
-    .example-utility-class {
-      display: block
-    }
-    `);
-  });
-});
-
-test('options can be customized', () => {
-  return generatePluginCss({
-    theme: {
-      centerAbsolute: {
-        YOUR_PLUGIN_CUSTOM_OPTION: true,
-      },
-    },
-  }).then(css => {
-    expect(css).toMatchCss(`    
-    .example-utility-class {
-      display: block
-    }
-    .custom-utility-class {
-      background-color: red
-    }
-    `);
-  });
-});
-
-test('variants can be customized', () => {
-  return generatePluginCss({
-    theme: {
-      screens: {
-        sm: '640px',
-      },
-    },
-    variants: {
-      centerAbsolute: ['responsive', 'hover'],
-    },
-  }).then(css => {
     expect(css).toMatchCss(`
-    .example-utility-class {
-      display: block
-    } 
-    .hover\\:example-utility-class:hover {
-      display: block
-    } 
-    @media (min-width: 640px) {
-      .sm\\:example-utility-class {
-        display: block
-      }
-      .sm\\:hover\\:example-utility-class:hover {
-        display: block
-      }
+    .center-absolute-y {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%)
     }
-    `);
+
+    .center-absolute-x {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%)
+    }
+
+    .center-absolute {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%)
+    }`);
   });
 });
+
+// test('options can be customized', () => {
+//   return generatePluginCss({
+//     theme: {
+//       centerAbsolute: {
+//         YOUR_PLUGIN_CUSTOM_OPTION: true,
+//       },
+//     },
+//   }).then(css => {
+//     expect(css).toMatchCss(`    
+//     .example-utility-class {
+//       display: block
+//     }
+//     .custom-utility-class {
+//       background-color: red
+//     }
+//     `);
+//   });
+// });
+
+// test('variants can be customized', () => {
+//   return generatePluginCss({
+//     theme: {
+//       screens: {
+//         sm: '640px',
+//       },
+//     },
+//     variants: {
+//       centerAbsolute: ['responsive', 'hover'],
+//     },
+//   }).then(css => {
+//     expect(css).toMatchCss(`
+//     .example-utility-class {
+//       display: block
+//     } 
+//     .hover\\:example-utility-class:hover {
+//       display: block
+//     } 
+//     @media (min-width: 640px) {
+//       .sm\\:example-utility-class {
+//         display: block
+//       }
+//       .sm\\:hover\\:example-utility-class:hover {
+//         display: block
+//       }
+//     }
+//     `);
+//   });
+// });
