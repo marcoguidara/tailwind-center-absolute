@@ -49,6 +49,31 @@ This plugin will generate following CSS:
   top: '50%',
   transform: 'translate(-50%, -50%)',
 },
+
+@media (min-width: 640px) {
+  .sm:center-absolute-y {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+  }
+
+  .sm:center-absolute-x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+
+  .sm:center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+  }
+}
+/* 
+* ...other responsive variants based on theme options
+*/
+
 /* ... */
 ```
 
@@ -72,6 +97,13 @@ Use examples:
 <!-- Center center both horizontally and vertically -->
 <div class="relative">
   <div class="center-absolute">
+    <!-- content -->
+  </div>
+</div>
+
+<!-- Center center both horizontally and vertically with media query: @media (min-width: 640px)-->
+<div class="relative">
+  <div class="sm:center-absolute">
     <!-- content -->
   </div>
 </div>
