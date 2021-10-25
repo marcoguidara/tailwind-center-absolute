@@ -15,17 +15,8 @@ Then add the plugin to your `tailwind.config.js` file:
 module.exports = {
   theme: {
     // ...
-    // Optional. Your plugin might not have any options at all.
-    centerAbsolute: {
-      // ...
-      YOUR_PLUGIN_CUSTOM_OPTION: true,
-      // ...
-    },
   },
   variants: {
-    // ...
-    // Optional. Your plugin might not have any variants at all.
-    centerAbsolute: ['responsive'],
     // ...
   },
   plugins: [
@@ -40,14 +31,50 @@ This plugin will generate following CSS:
 
 ```css
 /* ... */
-.example-utility-class {
-  display: block;
-}
+ .center-absolute-y: {
+  position: 'absolute',
+  top: '50%',
+  transform: 'translateY(-50%)',
+},
 
-.custom-utility-class {
-  background-color: red;
-}
+.center-absolute-x: {
+  position: 'absolute',
+  left: '50%',
+  transform: 'translateX(-50%)',
+},
+
+.center-absolute: {
+  position: 'absolute',
+  left: '50%',
+  top: '50%',
+  transform: 'translate(-50%, -50%)',
+},
 /* ... */
+```
+
+Use examples:
+
+```html
+<!-- Center vertically -->
+<div class="relative">
+  <div class="center-absolute-y">
+    <!-- content -->
+  </div>
+</div>
+
+<!-- Center horizontally -->
+<div class="relative">
+  <div class="center-absolute-x">
+    <!-- content -->
+  </div>
+</div>
+
+<!-- Center center both horizontally and vertically -->
+<div class="relative">
+  <div class="center-absolute-x">
+    <!-- content -->
+  </div>
+</div>
 ```
 
 ## License
