@@ -2,13 +2,13 @@
 
 > A plugin that provides utilities for centering an element on x/y axis.
 
-Install the plugin from npm:
+## Installation:
 
 ```
-$ npm install @marcoguidara/tailwind-center-absolute
+$ npm i https://github.com/marcoguidara/tailwind-center-absolute
 ```
 
-Then add the plugin to your `tailwind.config.js` file:
+## Tailwind configuration (`tailwind.config.js` file):
 
 ```js
 // tailwind.config.js
@@ -27,7 +27,7 @@ module.exports = {
 };
 ```
 
-Use examples:
+## Use examples:
 
 ```html
 <!-- Center vertically -->
@@ -59,7 +59,7 @@ Use examples:
 </div>
 ```
 
-This plugin will generate following CSS:
+## Generated css:
 
 ```css
 /* ... */
