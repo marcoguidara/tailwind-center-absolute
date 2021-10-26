@@ -151,8 +151,7 @@ test('utility classes can be generated', () => {
           top: 50%;
           transform: translate(-50%, -50%)
         }
-      }`
-    );
+      }`);
   });
 });
 
@@ -164,7 +163,7 @@ test('utility classes can be generated', () => {
 //       },
 //     },
 //   }).then(css => {
-//     expect(css).toMatchCss(`    
+//     expect(css).toMatchCss(`
 //     .example-utility-class {
 //       display: block
 //     }

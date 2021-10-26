@@ -31,7 +31,6 @@ module.exports = plugin(
     theme: {
       // Default options for your custom plugin.
       // Docs: https://tailwindcss.com/docs/plugins#exposing-options
-      centerAbsolute: true
     },
     variants: {
       // Default variants for your custom plugin.
