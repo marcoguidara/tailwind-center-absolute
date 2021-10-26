@@ -4,7 +4,7 @@
 
 ## Installation:
 
-```
+```sh
 $ npm i https://github.com/marcoguidara/tailwind-center-absolute
 ```
 
