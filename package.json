@@ -12,11 +12,6 @@
     "release": "standard-version",
     "postrelease": "git push --follow-tags origin main && npm publish"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint:fix && npm run format && npm run test"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marcoguidara/tailwind-center-absolute.git"
@@ -40,7 +35,6 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.3",
     "eslint-plugin-prettier": "^3.1.4",
-    "husky": "^4.3.0",
     "jest": "^27.3.1",
     "jest-matcher-css": "^1.1.0",
     "lint-staged": "^10.5.2",
@@ -49,6 +43,5 @@
     "prettier": "^2.2.0",
     "standard-version": "^9.1.0",
     "tailwindcss": "^2.0.1"
-  },
-  "dependencies": {}
+  }
 }
